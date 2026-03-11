@@ -1,113 +1,93 @@
-# عمّال - منصة خدمات العمالة اليومية
+# 👷 عُمّال (Ommal) - Syrian Daily Workers Platform 🇸🇾
 
-منصة ويب تربط بين أصحاب العمل والعمال الماهرين في خدمات الدهان والنجارة والكهرباء والبناء والأعمال المنزلية.
+[![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![Firebase](https://img.shields.io/badge/Firebase-10-orange?style=for-the-badge&logo=firebase)](https://firebase.google.com/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-## ✨ الميزات (سوريا 🇸🇾)
+**عُمّال** هي منصة ويب عصرية متكاملة تهدف إلى دعم العمال السوريين من خلال ربطهم بأصحاب العمل بسهولة وأمان. يعتمد المشروع على أحدث تقنيات الويب لتقديم تجربة مستخدم سلسة وسريعة تلبي احتياجات السوق المحلية.
 
-- **نشر طلبات عمل** بخطوات بسيطة وسريعة (متوافق مع دمشق، حلب، حمص، اللاذقية، إلخ).
-- **هوية آمنة (Anonymous Auth):** حفظ خصوصية المستخدم وتثبيت هويته تقنياً دون طلب بيانات شخصية.
-- **تصفح الإعلانات** مع إمكانية البحث والفلترة حسب التخصص والمدينة.
-- **تصفح العمال المتاحين** والتواصل المباشر معهم.
-- **زر "أنا متاح اليوم"** ليظهر العامل في القائمة (حفظ الملكية تقنياً).
-- **التواصل المباشر** عبر الاتصال (أرقام 09XXXXXXXX) أو واتساب.
-- **تصميم Mobile First** بدعم كامل للغة العربية RTL.
+---
 
-## 🛠️ التقنيات المستخدمة
+## 🌟 Key Features | المميزات الرئيسية
 
-- **Next.js 14** (App Router)
-- **React 18**
-- **Tailwind CSS 3**
-- **Firebase Authentication** (الدخول المجهول لضمان الأمان)
-- **Firestore Database** (قاعدة برمجية آمنة)
+- **🎯 Localized Experience:** Optimized for the Syrian environment (Cities, SYP currency, local phone formats).
+- **🔒 Anonymous Security:** Privacy-first approach using Firebase Anonymous Auth for instant, secure access.
+- **📊 Real-time Analytics:** Live counters showing active workers and jobs directly from Firestore.
+- **📱 Responsive Glassmorphism:** A stunning, mobile-first UI with modern glassy effects and full RTL support.
+- **📞 Direct Communication:** One-click WhatsApp or Phone call integration for quick hiring.
+- **🛡️ Secure Ownership:** Robust Firebase security rules ensuring users can only manage their own listings.
 
-## 🚀 تشغيل المشروع محلياً
+---
 
-```bash
-# 1. تثبيت المكتبات
-npm install
+## 🛠️ Tech Stack | التقنيات المستخدمة
 
-# 2. تشغيل خادم التطوير
-npm run dev
-```
+| Category | Technology | Description |
+| :--- | :--- | :--- |
+| **Frontend** | **Next.js 14 (App Router)** | High-performance React framework for SEO and speed. |
+| **Styling** | **Tailwind CSS** | Utility-first CSS for custom, responsive, and premium designs. |
+| **Backend** | **Firebase (Firestore & Auth)** | Real-time database and secure authentication. |
+| **Deployment** | **Netlify** | Automated CI/CD for seamless production updates. |
+| **Languages** | **JavaScript / TypeScript** | Core logic and type safety. |
 
-افتح المتصفح على: [http://localhost:3000](http://localhost:3000)
+---
 
-## 🔥 ربط Firebase (لاحقاً)
+## 👨‍💻 Developer Spotlight | المطور
 
-1. أنشئ مشروع Firebase على [console.firebase.google.com](https://console.firebase.google.com)
-2. فعّل **Firestore Database**
-3. أنشئ تطبيق ويب واحصل على بيانات الاتصال
-4. أنشئ ملف `.env.local` في جذر المشروع وأضف:
+### **Ayham AlMazyad**
+*Front-End Developer & Tech Enthusiast*
 
-```env
-NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
-NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
-```
+I am an 18-year-old developer from Syria, dedicated to building high-quality web applications that solve real-world problems. My focus is on **performance, usability, and clean code**.
 
-## 🌐 النشر على Vercel
+#### 🏆 Professional Certifications
+- **Google:** Technical Support Fundamentals
+- **Google:** The Bits and Bytes of Computer Networking
+- **Microsoft:** Generative AI for Data Science with Copilot
+- **Meta:** Introduction to Social Media Marketing
+- **IBM:** Getting Started with Git and GitHub
 
-1. ارفع المشروع على GitHub
-2. اذهب إلى [vercel.com](https://vercel.com) وسجل الدخول
-3. اضغط **"New Project"** واختر المستودع
-4. أضف متغيرات البيئة (Environment Variables) الخاصة بـ Firebase
-5. اضغط **"Deploy"**
+#### 🚀 Skills
+- **Core:** HTML5, CSS3, JavaScript (ES6+)
+- **Frameworks:** React, Next.js
+- **Tools:** Git, GitHub, Firebase, Tailwind CSS
+- **AI/ML:** Proficient in AI-assisted development (GitHub Copilot).
 
-سيتم بناء المشروع ونشره تلقائياً!
+---
 
-## 📁 هيكل المشروع
+## 🚀 Getting Started | البدء والتشغيل
 
-```
-├── app/
-│   ├── layout.js          # التخطيط الرئيسي (RTL + Arabic font)
-│   ├── page.js            # الصفحة الرئيسية
-│   ├── globals.css        # الأنماط العامة
-│   ├── jobs/
-│   │   ├── page.js        # قائمة الإعلانات
-│   │   └── [id]/page.js   # تفاصيل الإعلان
-│   ├── post-job/
-│   │   └── page.js        # نشر طلب عمل
-│   └── workers/
-│       ├── page.js        # قائمة العمال
-│       └── [id]/page.js   # ملف العامل
-├── components/
-│   ├── Navbar.js
-│   ├── Footer.js
-│   ├── JobCard.js
-│   ├── WorkerCard.js
-│   ├── PostJobForm.js
-│   └── RatingStars.js
-├── lib/
-│   ├── firebase.js        # إعدادات Firebase
-│   └── dummyData.js       # بيانات تجريبية
-└── README.md
-```
+To run this project locally, follow these steps:
 
-## 📊 قاعدة البيانات (Firestore)
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Aeham-sys/daily-workers-syria.git
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Set up Environment Variables:**
+   Create a `.env.local` file with your Firebase configuration:
+   ```env
+   NEXT_PUBLIC_FIREBASE_API_KEY=...
+   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=...
+   NEXT_PUBLIC_FIREBASE_PROJECT_ID=...
+   ...
+   ```
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
 
-### Collection: `jobs`
+---
 
-| الحقل       | النوع     | الوصف         |
-| ----------- | --------- | ------------- |
-| title       | string    | عنوان العمل   |
-| description | string    | وصف العمل     |
-| location    | string    | الموقع        |
-| wage        | string    | الأجر المتوقع |
-| phone       | string    | رقم الهاتف    |
-| category    | string    | نوع العمل     |
-| createdAt   | timestamp | تاريخ النشر   |
+## 📬 Connect with Me | تواصل معي
 
-### Collection: `workers`
+- **Portfolio:** [ayham-portfolio.info](https://myportfolio.syria-cloud.info/index.html)
+- **Email:** [ayhamalmazyad@gmail.com](mailto:ayhamalmazyad@gmail.com)
+- **WhatsApp:** [+963 945 555 925](https://wa.me/963945555925)
+- **GitHub:** [@Aeham-sys](https://github.com/Aeham-sys)
 
-| الحقل          | النوع   | الوصف      |
-| -------------- | ------- | ---------- |
-| name           | string  | اسم العامل |
-| phone          | string  | رقم الهاتف |
-| skills         | array   | المهارات   |
-| rating         | number  | التقييم    |
-| location       | string  | الموقع     |
-| availableToday | boolean | متاح اليوم |
-| bio            | string  | نبذة       |
+---
+
+Built with ❤️ for the Syrian tech community. 🇸🇾
