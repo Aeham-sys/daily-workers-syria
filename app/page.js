@@ -5,15 +5,17 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import JobCard from "@/components/JobCard";
 import { db } from "@/lib/firebase";
-import { collection, query, orderBy, limit, getDocs } from "firebase/firestore";
+import { collection, query, orderBy, limit, getDocs, getCountFromServer } from "firebase/firestore";
 
 export default function HomePage() {
   const [latestJobs, setLatestJobs] = useState([]);
+  const [stats, setStats] = useState({ workers: 0, jobs: 0 });
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function fetchLatest() {
+    async function fetchData() {
       try {
+        // Fetch latest jobs
         const jobsRef = collection(db, "jobs");
         const q = query(jobsRef, orderBy("createdAt", "desc"), limit(3));
         const snapshot = await getDocs(q);
@@ -28,13 +30,25 @@ export default function HomePage() {
           };
         });
         setLatestJobs(data);
+
+        // Fetch counts
+        const workersRef = collection(db, "workers");
+        const [workerSnap, jobSnap] = await Promise.all([
+          getCountFromServer(workersRef),
+          getCountFromServer(jobsRef)
+        ]);
+        
+        setStats({
+          workers: workerSnap.data().count,
+          jobs: jobSnap.data().count
+        });
       } catch (error) {
-        console.error("Error fetching latest jobs: ", error);
+        console.error("Error fetching data: ", error);
       } finally {
         setLoading(false);
       }
     }
-    fetchLatest();
+    fetchData();
   }, []);
 
   return (
@@ -76,11 +90,15 @@ export default function HomePage() {
         <section className="bg-white border-b border-gray-100">
           <div className="max-w-2xl mx-auto px-4 py-4 grid grid-cols-3 gap-4 text-center">
             <div>
-              <div className="text-2xl font-black text-brand-600">+500</div>
+              <div className="text-2xl font-black text-brand-600">
+                {loading ? "..." : stats.workers}
+              </div>
               <div className="text-xs text-gray-500">عامل مسجل</div>
             </div>
             <div className="border-x border-gray-100">
-              <div className="text-2xl font-black text-brand-600">+120</div>
+              <div className="text-2xl font-black text-brand-600">
+                {loading ? "..." : stats.jobs}
+              </div>
               <div className="text-xs text-gray-500">إعلان نشط</div>
             </div>
             <div>
