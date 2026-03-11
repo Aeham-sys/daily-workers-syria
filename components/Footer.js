@@ -39,7 +39,7 @@ export default function Footer() {
         <div className="mt-6 pt-6 border-t border-gray-100 text-center text-sm text-gray-400 flex flex-col gap-1">
           <p>جميع الحقوق محفوظة © 2026 عمّال - منصة خدمات العمالة اليومية</p>
           <p>
-            تم تطوير وتصميم هذا الموقع من قبل{" "}
+            تم تطوير هذا الموقع من قبل{" "}
             <a
               href="https://myportfolio.syria-cloud.info/index.html"
               target="_blank"
