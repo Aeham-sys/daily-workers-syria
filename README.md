@@ -1,4 +1,4 @@
-# 👷 عُمّال (Ommal) - Syrian Daily Workers Platform 🇸🇾
+# 👷 عُمّال (3mal) - Syrian Daily Workers Platform 🇸🇾
 
 [![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![Firebase](https://img.shields.io/badge/Firebase-10-orange?style=for-the-badge&logo=firebase)](https://firebase.google.com/)
