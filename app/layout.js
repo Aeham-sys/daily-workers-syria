@@ -27,6 +27,9 @@ export const metadata = {
     description: "منصة تربط أصحاب العمل بالعمال الماهرين في سوريا.",
     images: ["/og-image.png"],
   },
+  verification: {
+    google: "LBkARNpwx1x3XNtJ0I2cxwwOkdDuq-oeURMw0BjzL44",
+  },
 };
 
 export default function RootLayout({ children }) {
