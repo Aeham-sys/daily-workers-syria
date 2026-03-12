@@ -27,7 +27,7 @@ export const metadata = {
     siteName: "عمّال",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://daily-workers-syria.netlify.app/og-image.png",
         width: 1200,
         height: 630,
         alt: "عمّال - منصة الخدمات العمالية في سوريا",
@@ -40,7 +40,10 @@ export const metadata = {
     card: "summary_large_image",
     title: "عمّال | منصة خدمات العمالة اليومية",
     description: "أول منصة سورية لربط العمال الماهرين بأصحاب العمل.",
-    images: ["/og-image.png"],
+    images: ["https://daily-workers-syria.netlify.app/og-image.png"],
+  },
+  icons: {
+    icon: "/favicon.ico",
   },
   verification: {
     google: "LBkARNpwx1x3XNtJ0I2cxwwOkdDuq-oeURMw0BjzL44",
