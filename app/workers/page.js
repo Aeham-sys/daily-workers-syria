@@ -126,6 +126,32 @@ export default function WorkersPage() {
   return (
     <>
       <Navbar />
+      {/* Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "قائمة العمال الماهرين في سوريا",
+            "description": "قائمة بجميع العمال المتاحين لتقديم خدمات الدهان والنجارة والكهرباء.",
+            "itemListElement": filtered.slice(0, 10).map((w, index) => ({
+              "@type": "ListItem",
+              "position": index + 1,
+              "item": {
+                "@type": "Person",
+                "name": w.name,
+                "jobTitle": (w.skills || []).join(", "),
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": w.location,
+                  "addressCountry": "SY"
+                }
+              }
+            }))
+          })
+        }}
+      />
       <main className="page-container">
         <h1 className="section-title">👷 العمال المتاحون</h1>
 

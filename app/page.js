@@ -54,6 +54,24 @@ export default function HomePage() {
   return (
     <>
       <Navbar />
+      {/* Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "عمّال",
+            "url": "https://daily-workers-syria.netlify.app",
+            "description": "منصة لربط أصحاب العمل بالعمال الماهرين في سوريا",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://daily-workers-syria.netlify.app/workers?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          })
+        }}
+      />
       <main>
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-brand-600 to-brand-800 text-white">
@@ -125,7 +143,7 @@ export default function HomePage() {
                 جاري تحميل آخر الإعلانات...
               </p>
             ) : latestJobs.length > 0 ? (
-              latestJobs.map((job) => <JobCard key={job.id} job={job} />)
+              latestJobs.map((job) => <JobCard key={job.id} job={job} alt={`إعلان عمل: ${job.title}`} />)
             ) : (
               <p className="text-gray-500 text-center py-4">
                 لا توجد إعلانات نشطة حالياً.
